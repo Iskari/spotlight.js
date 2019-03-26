@@ -19,7 +19,7 @@ function Spotlight (config) {
                 `cursor: crosshair;` +
                 `pointer-events: none;` +
         	'}';
-        document.getElementsByTagName('head')[0].appendChild(style, ref);
+        document.getElementsByTagName('head')[0].appendChild(style);
     }
 }
 
@@ -45,9 +45,9 @@ Spotlight.prototype.isEnabled = function (event) {
 }
 
 Spotlight.prototype.convertToRGBA = function(hexValue, alpha) {
-    let r = parseInt(hexValue.slice(1,3), 16);
-    let g = parseInt(hexValue.slice(3,5), 16);
-    let b = parseInt(hexValue.slice(5,7), 16);
+    let r = parseInt(hexValue.slice(1, 3), 16);
+    let g = parseInt(hexValue.slice(3, 5), 16);
+    let b = parseInt(hexValue.slice(5, 7), 16);
     
     if(alpha === undefined) {
         alpha = 1;
@@ -58,6 +58,6 @@ Spotlight.prototype.convertToRGBA = function(hexValue, alpha) {
 
 window.spotlight = new Spotlight({
     height: 400,
-    width: 400
-    color: "#f1f442"
+    width: 400,
+    color: "#FFFFFF"
 });
