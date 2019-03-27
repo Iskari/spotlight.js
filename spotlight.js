@@ -1,4 +1,5 @@
-function Spotlight (config) {
+function Spotlight (config = {}) {
+    config = this.mergeConfig(config);
     document.body.addEventListener('mousemove', this.moveSpotlight);
     document.body.style.overflowX = 'hidden';
     
@@ -27,6 +28,18 @@ Spotlight.prototype.moveSpotlight = function (event) {
     let left = event.clientX - spotlight.clientWidth / 2;
     spotlight.style.top = `${top}px`;
     spotlight.style.left = `${left}px`;
+}
+
+Spotlight.prototype.mergeConfig = function(config) {
+    if(config.color === undefined) {
+        config.color = '#FFFFFF';
+    }
+    if(config.height === undefined) {
+        this.height = 200;
+    }
+    if(config.width === undefined) {
+        this.width = 200;
+    }
 }
 
 Spotlight.prototype.convertToRGBA = function(hexValue, alpha) {
