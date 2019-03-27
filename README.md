@@ -35,7 +35,7 @@ You can configure the color, the height and the width of your Spotlight.
     });
 ```
 
-### Width
+### Color
     Unit: HEX Color
 
 ```javascript
