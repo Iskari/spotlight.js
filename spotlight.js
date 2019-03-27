@@ -40,6 +40,7 @@ Spotlight.prototype.mergeConfig = function(config) {
     if (config.width === undefined) {
         this.width = 200;
     }
+    return config;
 }
 
 Spotlight.prototype.convertToRGBA = function(hexValue, alpha) {
