@@ -1,4 +1,6 @@
-![Spotlight.js](./example/logo.png)
+<p align="center">
+    <img src ="./example/logo.png" alt="Spotlight.JS" />
+</p>
 
 # Usage 
 
